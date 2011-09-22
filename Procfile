@@ -1,1 +1,1 @@
-web: node web.js
+web: node multiroomchat_server.js
