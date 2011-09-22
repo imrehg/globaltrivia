@@ -1,4 +1,5 @@
 ﻿var fs = require('fs');
+var port = process.env.PORT || 3000;
 var server = require('http').createServer(function(req, response){
   fs.readFile(__dirname+'/multiroomchat.html', function(err, data){
     response.writeHead(200, {'Content-Type':'text/html'}); 
@@ -6,7 +7,7 @@ var server = require('http').createServer(function(req, response){
     response.end();
   });
 });
-server.listen(8080);
+server.listen(port);
 
 
 var nowjs = require("now");
